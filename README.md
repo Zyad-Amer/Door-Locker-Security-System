@@ -1,4 +1,6 @@
-# Door Locker Security System Overview
+# Door Locker Security System
+
+## Overview
 
 This project implements a door locking mechanism controlled by a password using two ATmega32 Microcontrollers. The system is designed and implemented based on a layered architecture model, comprising two main components:
 
@@ -18,20 +20,20 @@ This project implements a door locking mechanism controlled by a password using 
 1. **Create a System Password:**
    - User inputs a 5-digit password twice for confirmation.
    - The Control_ECU verifies the passwords and saves them in EEPROM.
-   
+
 2. **Main Options:**
    - Displays the main system options on the LCD.
-   
+
 3. **Open Door:**
    - User inputs the password to unlock the door.
    - Control_ECU compares the entered password with the saved one.
    - If matched, the door unlocks and relocks after a specified time.
-   
+
 4. **Change Password:**
    - User inputs the current password to change it.
    - Control_ECU compares the entered password with the saved one.
    - If matched, the system proceeds to create a new password.
-   
+
 5. **Error Handling:**
    - If passwords do not match after three consecutive attempts:
      - Buzzer activates for 1 minute.
